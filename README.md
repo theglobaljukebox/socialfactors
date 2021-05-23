@@ -1,6 +1,6 @@
 # Social factors Data
 
-The Social factors database contains social information for societies held within the Global Jukebox project. 
+The Social factors database contains data coded for geography, population size, subsistence, political structure, gender roles, kinship & family structure, property, social stratification, sexuality, games, theology (adapted and expanded from early versions of the Ethnographic Atlas), for societies in the Global Jukebox. 
 
 This repository is for pulling, formatting, validating and cleaning the Social factors dataset.
 
