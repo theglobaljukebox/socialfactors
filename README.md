@@ -1,5 +1,9 @@
 # Social Factors Data
 
+
+[![DOI](https://zenodo.org/badge/370167427.svg)](https://zenodo.org/badge/latestdoi/370167427)
+
+
 Social Factors is a dataset forming part of [The Global Jukebox](https://theglobaljukebox.org/#). 
 For full details including detailed description of the datasets and how to use and interpret them, see:
 
