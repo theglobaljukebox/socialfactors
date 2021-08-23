@@ -18,6 +18,7 @@ Data is presented in three data tables within raw/
 | data.csv         | Codings on the vowel and consonant use in songs.         |
 | sources.csv 	   | Bibliography for the social data used                    |
 | societies.csv    | Metadata on the societies from which the songs originate.|
+| codings.csv      | Metadata on codings in data.csv.                         |
 
 
 ## How to cite the Global Jukebox
