@@ -1,0 +1,254 @@
+sort,VarID,VarTitle,VarDescription,VarCategory,VarType,Source,LineID_Code,Count,Code,CodeDescription,ShortName,EA_ConversionRules,Notes
+1,V1,Climatic Zone,Latitude range of the society. 30 degrees latitude has been defined as the frost line.,,Categorical,Wood (2021),1_NA,,NA,Missing data,Missing data,,
+2,,,,,,,1_1,,1,From 30 degrees south to 30 degrees north: Tropical Zone.,0-30,,
+3,,,,,,,1_2,,2,Above 30 degrees north or below 30 degrees south: Frost Zone.,31+,,
+4,V2,Altitude,Elevation of the society measured in meters above sea level.,,,Global Multi-resolution Terrain Elevation Data 2010; Wood (2021),,,X (Floating-point value),Society is located X meters above sea level,,,
+5,V3,Size of Settlements,"Average population of the communities of a culture, compiled from census or other information",Settlement,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),3_NA,686,NA,Missing data,Missing data,,
+6,,,,,,,3_1,123,1,Less than 50 people,<50,EA031 = 1,
+7,,,,,,,3_2,104,2,50-99 people,50-99,EA031 = 2,
+8,,,,,,,3_3,110,3,100-199 people,100-199,EA031 = 3,
+9,,,,,,,3_4,87,4,200-399 people,200-399,EA031 = 4,
+10,,,,,,,3_5,61,5,"400-1,000 people",400-1000,EA031 = 5,
+11,,,,,,,3_6,17,6,"1,000-5,000 people",1K-5K,EA031 = 6,
+12,,,,,,,3_7,39,7,"5,000-50,000 people",5K-50K,EA031 = 7,
+13,,,,,,,3_8,84,8,"Greater than 50,000 people",>50K,EA031 = 8,
+14,V4,Permanence of Settlement,"The stability of the main type of settlement in a culture -- whether fully or partially nomadic, whether permanent and dispersed, or settled and nucleated, or complex.",Settlement,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),4_NA,101,NA,Missing data,Missing data,,
+15,,,,,,,4_1,81,1,Fully nomadic groups,Bands,EA030 = 1,
+16,,,,,,,4_2,284,2,"Semi-nomadic communities whose members occupy a fixed settlement for some parts of the year but primarily wander in bands. Also includes communities that regularly shift between fixed settlements throughout the year, or from which a substantial proportion of the population departs seasonally to occupy shifting camps.",Semi-Nomadic,EA030 = 2 or 3,
+17,,,,,,,4_3,18,3,Compact communities whose location is shifted every few years.,Shifting,EA030 = 4,
+18,,,,,,,4_4,110,4,Clusters of hamlets or neighborhoods that are separated but form a more or less permanent single community.,Hamlet,EA030 = 6,
+19,,,,,,,4_5,674,5,"Compact and relatively permanent settlements, or neighborhoods of dispersed family homesteads.",Nucleated Villages/Towns,EA030 = 5 or 7,
+20,,,,,,,4_6,43,6,"Villages with outlying homesteads, or towns.",Complex,EA030 = 8,
+21,V5,Subsistence Mode,A rough typology of the productive techniques the societies use for extracting food from the environment.,Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),5_NA,0,NA,Missing data,Missing data,,
+22,,,,,,,5_1,119,1,Collecting outweighs game producing and agriculture,Collectors,"(EA004 < 4 and EA005 < 4 and EA004 + EA005 < 6 and the greatest value of (E001, E002, E003) > the greater value of (EA004, EA005)) and 
+Either 
+(EA001 ≥ 4 and EA001 ≥ EA002 and EA003 - EA001 ≤ 1) 
+or 
+(EA001 < 4 and EA001 > EA002 > EA003 or EA001 > EA003 > EA002)",
+23,,,,,,,5_2,172,2,Hunting and/or fishing outweigh collection and/or agriculture,Game-Producers,"(EA004 < 4 and EA005 < 4 and EA004 + EA005 < 6 and the greatest value of (E001, E002, E003) > the greater value of (EA004, EA005)) and does not satisfy the conditions for 5_1",
+24,,,,,,,5_3,265,3,Planters (prior to European contact) with simple tools and no large domestic animals,Incipient Producers,"Does not satisfy conditions for 5_1, 5_2, 5_4, 5_5, 5_6, 5_7, or 5_8",
+25,,,,,,,5_4,522,4,"Cultivators with simple tools and animal husbandry (goats, sheep, horses, deer, camels, yaks, water buffalo, or cattle)",Cultivation w/ Animals,"(EA040 > 1 and EA005 > 0) and 
+Either 
+(EA028 = 4, 5, or 6 and EA039 ≠ 3) 
+or
+ (EA028 = 3)",
+26,,,,,,,5_5,39,5,"Full nomadic pastoralism, at least 70% dependant on animal husbandry",Complex Pastoralists,EA004 > 5 and EA005 < 3,
+27,,,,,,,5_6,44,6,"Horticulture with fishing, tree cultivation, animal husbandry, and ocean fishing",Horticulturists w/ Fish,EA040 > 1 and EA003 > 2 and EA028 = 4,
+28,,,,,,,5_7,88,7,Plough agriculture,Plough Agriculture,EA028 = 5 and EA039 = 3 and EA040 = 3 or 7 and EA005 > (EA004)/2,
+29,,,,,,,5_8,62,8,Irrigation,Irrigators,EA028 = 6 and EA039 = 3 and EA040 = 3 or 7,
+30,V6,Collecting,"The culture’s degree of dependence on collecting as its main food source -- this includes gathering wild plants, seeds, roots, and small land fauna.",Subsistence,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),6_NA,2,NA,Missing data,Missing data,,
+31,,,,,,,6_1,77,1,46 to 100 percent dependence,>45%,EA001 ≥ 5,
+32,,,,,,,6_2,109,2,26 to 45 percent dependence,26-45%,EA001 = 3 or 4,
+33,,,,,,,6_3,113,3,16 to 25 percent dependence,16-25%,EA001 = 2,
+34,,,,,,,6_4,273,4,6 to 15 percent dependence,6-15%,EA001 = 1,
+35,,,,,,,6_5,737,5,0 to 5 percent dependence,<5%,EA001 = 0,
+36,V7,Hunting,The culture’s degree of dependence on hunting as its main food source -- this includes trapping and fowling.,Subsistence,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),7_NA,2,NA,Missing data,Missing data,,
+37,,,,,,,7_1,55,1,46 to 100 percent dependence,>45%,EA002 ≥ 5,
+38,,,,,,,7_2,202,2,26 to 45 percent dependence,26-45%,EA002 = 3 or 4,
+39,,,,,,,7_3,182,3,16 to 25 percent dependence,16-25%,EA002 = 2,
+40,,,,,,,7_4,464,4,6 to 15 percent dependence,6-15%,EA002 = 1,
+41,,,,,,,7_5,406,5,0 to 5 percent dependence,<5%,EA002 = 0,
+42,V8,Fishing,The culture’s degree of dependence on fishing as its main food resource -- here fishing includes shell fishing and catching large aquatic mammals such as seals and whales.,Subsistence,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),8_NA,2,NA,Missing data,Missing data,,
+43,,,,,,,8_1,96,1,46 to 100 percent dependence,>45%,EA003 ≥ 5,
+44,,,,,,,8_2,190,2,26 to 45 percent dependence,26-45%,EA003 = 3 or 4,
+45,,,,,,,8_3,207,3,16 to 25 percent dependence,16-25%,EA003 = 2,
+46,,,,,,,8_4,354,4,6 to 15 percent dependence,6-15%,EA003 = 1,
+47,,,,,,,8_5,462,5,0 to 5 percent dependence,<5%,EA003 = 0,
+48,V9,Animal Husbandry,"The degree to which a society is dependent for subsistence on animal husbandry (meat, milk, leather, wool, hair, and other animal products).",Subsistence,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),9_NA,0,NA,Missing data,Missing data,,
+49,,,,,,,9_1,478,1,0 to 5 percent dependence,<5%,EA004 = 0,
+50,,,,,,,9_2,544,2,6 to 25 percent dependence,6-25%,EA004 = 1 or 2,
+51,,,,,,,9_3,201,3,26 to 45 percent dependence,26-45%,EA004 = 3 or 4,
+52,,,,,,,9_4,88,4,46 to 100 percent dependence,>45%,5 ≤ EA004 ≤ 9,
+53,V10,Intensity of Agriculture,The style of agriculture implemented in the society.,Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),10_NA,98,NA,Missing data,Missing data,,
+54,,,,,,,10_1,234,1,No agriculture,Absence,EA028 = 1,
+55,,,,,,,10_2,42,2,"Casual agriculture, i.e., the slight or sporadic cultivation of food or other plants incidental to a primary dependence upon extracting activities.",Casual,EA028 = 2,
+56,,,,,,,10_3,484,3,"Extensive agriculture, when cultivation is moved to new fields every year or so.",Extensive,EA028 = 3,
+57,,,,,,,10_4,99,4,"Horticulture, where semi-permanent vegetable plots or orchards are the main form of cultivation, rather than field crops.",Horticulture,EA028 = 4,
+58,,,,,,,10_5,222,5,Intensive agriculture. Fertilization and crop rotation on permanent fields.,Intensive,EA028 = 5,
+59,,,,,,,10_6,132,6,Intensive cultivation where the land is irrigated.,Irrigation,EA028 = 6,
+60,V11,Agricultural Product,"The main agricultural product of a society, whether in the form of roots, fruits, or grains.",Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),11_NA,349,NA,Missing data,Missing data,,
+61,,,,,,,11_1,239,1,"Roots or tubers, e.g., manioc, potatoes, taro, or yams. Vegetables, e.g., cucurbits, greens, or legumes.",Roots/Vegetables,EA029 = 3 or 5,
+62,,,,,,,11_2,81,2,"Tree fruits, e.g., bananas, breadfruit, coconuts, or dates.",Fruits,EA029 = 4,
+63,,,,,,,11_3,642,3,"Cereal grains, e.g., maize, millet, rice, or wheat.",Grains,EA029 = 6,
+64,V12,Size of Animals,The principal form of domesticated animals in the society.,Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),12_NA,525,NA,Missing data,Missing data,,
+65,,,,,,,12_1,106,1,"Pigs, when they are the only domestic animal that is important.",Pigs,EA040 = 2,
+66,,,,,,,12_2,176,2,"Sheep and/or goats, when they are the main type.",Sheep/Goats,EA040 = 3,
+67,,,,,,,12_3,504,3,"Relatively large domestic animals such as cattle, yaks, water buffalo, camels, deer, horses, donkeys.",Others,EA040 ≥ 4,
+68,V13,Milking,The presence of milking and types of animals that are milked.,Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),13_NA,640,NA,Missing data,Missing data,,
+69,,,,,,,13_1,288,1,Milking is absent.,Absence,EA041 = 1,
+70,,,,,,,13_2,20,2,Sheep/goats and deer are milked.,Sheep & Deer,EA041 = 2 and EA040 = 3 or 5,
+71,,,,,,,13_3,363,3,"Other animals (camelids, equine animals, bovine animals) are milked.",Others,"EA041 = 2 and EA040 = 4, 6, or 7",
+72,V14,Metal Working,The presence or absence of metal working in a society.,Labour,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),14_NA,319,NA,Missing data,Missing data,,
+73,,,,,,,14_1,527,1,Metal working is absent.,Absence,EA044 = 9,
+74,,,,,,,14_2,465,2,Metal working is present.,Presence,EA044 < 9,
+75,V15,Gender Complementarity: Main subsistence activity,"The proportional contribution of men and women to the primary food producing activity of the society (either gathering, hunting, fishing, animal husbandry, or agriculture).",Labour; Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),15_NA,294,NA,Missing data,Missing data,,
+76,,,,,,,15_1,339,1,"Either women alone perform the main food producing activity, or perform appreciably more than men.",Females more/alone (Complementarity),"Either:
+V5 = 1 and EA050 = 5 or 6;
+V5 = 2 and either (EA002 ≥ 4 and EA002 ≥ EA003) or ((EA002 < 4 and EA002 > EA003) and (EA051 = 5 or 6));
+V5 = 2 and either (EA002 ≥ 4 and EA002 < EA003) or ((EA002 < 4 and EA002 ≤ EA003) and (EA052 = 5 or 6)); 
+V5 = 3, 4, 6, 7, or 8 and EA054 = 5 or 6;
+V5 = 5 and EA053 = 5 or 6",
+77,,,,,,,15_2,264,2,Men and women participate equally in the main food producting activity.,Equal Participation (Complementarity),"Either:
+V5 = 1 and EA050 = 3 or 4;
+V5 = 2 and either (EA002 ≥ 4 and EA002 ≥ EA003) or ((EA002 < 4 and EA002 > EA003) and (EA051 = 3 or 4)); 
+V5 = 2 and either (EA002 ≥ 4 and EA002 < EA003) or ((EA002 < 4 and EA002 ≤ EA003) and (EA052 = 3 or 4)); 
+V5 = 3, 4, 6, 7, or 8 and EA054 = 3 or 4;
+V5 = 5 and EA053 = 3 or 4",
+78,,,,,,,15_3,414,3,"Either men alone perform the main food producing activity, or perform appreciably more than women.",Males more/alone (Non-Complementarity),"Either:
+V5 = 1 and EA050 = 1 or 2;
+V5 = 2 and either (EA002 ≥ 4 and EA002 ≥ EA003) or ((EA002 < 4 and EA002 > EA003) and (EA051 = 1 or 2)); 
+V5 = 2 and either (EA002 ≥ 4 and EA002 < EA003) or ((EA002 < 4 and EA002 ≤ EA003) and (EA052 = 1 or 2)); 
+V5 = 3, 4, 6, 7, or 8 and EA054 = 1 or 2;
+V5 = 5 and EA053 = 1 or 2",
+79,V16,Gender Complementarity: All subsistence activities,"An index, based on the world average, of the proportional contribution of men and women averaged across all food producing activities present in the society.",Labour; Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),16_NA,1311,NA,Missing data,Missing data,,
+80,,,,,,,16_1,0,1,Women participate in food producing activities at a higher rate than the world average.,Complementary,"The average below is weighted using the following scale: 
+EA050-54_1 = 0, EA050-54_2 = 1, EA050-54_3 = 2, EA050-54_4 = 2, EA050-54_5 = 3, EA050-54_6 = 4
+
+((EA050 + EA051 + EA052 + EA053 + EA054)/5) > World Average ",
+81,,,,,,,16_2,0,2,Women participate in food producing activities at a lower rate than the world average.,Non-Complementary,"The average below is weighted using the following scale: 
+EA050-54_1 = 0, EA050-54_2 = 1, EA050-54_3 = 2, EA050-54_4 = 2, EA050-54_5 = 3, EA050-54_6 = 4
+
+((EA050 + EA051 + EA052 + EA053 + EA054)/5) < World Average ",
+82,V17,Gender Complementarity: Crafts,"An index, based on the world average, of the proportional contribution of men and women averaged across six craft activities: Metal Working, Weaving, Leather Working, Pottery, Boat Building, and House Construction",Labour,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),17_NA,1311,NA,Missing data,Missing data,,
+83,,,,,,,17_1,0,1,Women participate in craft activities at a higher rate than the world average.,Complementary,"The average below is weighted using the following scale: 
+EA044-49_1 = 0, EA044-49_2 = 1, EA044-49_3 = 2, EA044-49_4 = 2, EA044-49_5 = 3, EA044-49_6 = 4
+
+((EA044 + EA045 + EA046 + EA047 + EA048 + EA049)/6) > World Average ",
+84,,,,,,,17_2,0,2,Women participate in craft activities at a lower rate than the world average.,Non-Complementary,"The average below is weighted using the following scale: 
+EA044-49_1 = 0, EA044-49_2 = 1, EA044-49_3 = 2, EA044-49_4 = 2, EA044-49_5 = 3, EA044-49_6 = 4
+
+((EA044 + EA045 + EA046 + EA047 + EA048 + EA049)/6) < World Average ",
+85,V18,Gender Differentiation,"An index, based on the world average, of the extent to which both craft and subsistence activites are done in gender-separate groups or coed groups.",Labour; Subsistence,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),18_NA,1311,NA,Missing data,Missing data,,
+86,,,,,,,18_1,0,1,Craft and subsistence activities are performed by gender-separated groups at a higher rate than the world average.,Differentation,"The average below is weighted using the following scale: 
+EA044-54_1 = 3, EA044-54_2 = 1, EA044-54_3 = 2, EA044-54_4 = 0, EA044-54_5 = 1, EA044-54_6 = 3
+
+((EA044 + EA045 + EA046 + EA047 + EA048 + EA049 + EA050 + EA051 + EA052 + EA053 + EA054)/11) > World Average ",
+87,,,,,,,18_2,0,2,Craft and subsistence activities are performed by gender-separated groups at a lower rate than the world average.,No Differentation,"The average below is weighted using the following scale: 
+EA044-54_1 = 3, EA044-54_2 = 1, EA044-54_3 = 2, EA044-54_4 = 0, EA044-54_5 = 1, EA044-54_6 = 3
+
+((EA044 + EA045 + EA046 + EA047 + EA048 + EA049 + EA050 + EA051 + EA052 + EA053 + EA054)/11) < World Average ",
+88,V19,Segregation of Adolescent Boys,"Whether adolescent boys are separated from the family, perhaps as part of an initiation rite.",Ritual,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),19_NA,535,NA,Missing data,Missing data,,
+89,,,,,,,19_1,260,1,Adolescent boys are isolated from nuclear family as a part of initiation.,Segregation,EA038 ≥ 3,
+90,,,,,,,19_2,516,2,There is some familial contact during adolescence.,Contact,EA038 = 1 or 2,
+91,V20,Premarital Sex Norms for Females,The extent to which female premarital sexual activity is allowed or prohibited.,Ritual,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),20_NA,691,NA,Missing data,Missing data,,
+92,,,,,,,20_1,288,1,"Premarital sex is allowed, such as for trial marriage.",Allowed,EA078 ≥ 4,
+93,,,,,,,20_2,126,2,Premarital sex is weakly prohibited through social sanctions of some sort.,Weak-Prohibition,EA078 = 3,
+94,,,,,,,20_3,206,3,"Virginity demanded for marriage, or premarital sex is precluded by early marriage of females.",Prohibited,EA078 = 1 or 2,
+95,V21,Means of Marriage,"The cost of marriage, and whether it falls on the shoulders of the groom's or the bride's family.",Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),21_NA,21,NA,Missing data,Missing data,,
+96,,,,,,,21_1,166,1,A transfer of a female relative of the groom in exchange for the bride.,Exchange,EA006 = 2 or 5,
+97,,,,,,,21_2,658,2,"A substantial payment of livestock, goods, money, or labor from the groom’s family in exchange for the bride.",Bride-Price,EA006 = 1,
+98,,,,,,,21_3,63,3,Reciprocal exchange of substantial gifts between the two families.,Gift,EA006 = 4,
+99,,,,,,,21_4,360,4,A small or symbolic payment from the groom’s family.,Token,EA006 = 3,
+100,,,,,,,21_5,43,5,"A substantial payment from the bride’s family to the bride, the groom, or the groom’s kinsmen.",Dowry,EA006 = 7,
+101,V22,Type of Polygyny,"The presence or absence of polygyny (more than one wife in a family), and the degree to which the type of polygyny emphasizes the separation of the wives. ",Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),22_NA,30,NA,Missing data,Missing data,,
+102,,,,,,,22_1,367,1,Polygyny - Separate. Each wife occupies a separate dwelling.,Polygyny - Separate,"Either
+(EA008 = 4 or 5 and EA009 = 4 or 5) 
+or
+(EA008 = 1, 6, 7, or 8 and EA009 = 4 or 5)",
+103,,,,,,,22_2,227,2,Polygyny - Together. All the wives live together.,Polygyny - Together,"Either
+(EA008 = 4 or 5 and EA009 = 3 or 6) 
+or  
+(EA008 = 1, 6, 7, or 8 and EA009 = 3 or 6)",
+104,,,,,,,22_3,463,3,Polygyny - Nuclear. Small families with occasional polygyny.,Polygyny - Nuclear,"Either
+(EA008 = 2) 
+or  
+(EA008 = 1, 6, 7, or 8 and EA009 = 2)",
+105,,,,,,,22_4,221,4,Monogamy. No polygyny.,Monogamy,"EA008 = 1, 6, 7, or 8 and EA009 = 1",
+106,,,,,,,22_5,3,5,Polyandry. More than one husband in the family.,Polyandry,"Either
+(EA008 = 3) 
+or  
+(EA008 = 1, 6, 7, or 8 and EA009 = 7)",
+107,V23,Family Size,The typical size of families that dwell together in the society.,Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),23_NA,318,NA,Missing data,Missing data,,
+108,,,,,,,23_1,568,1,Extended. Containing several related families under the same roof.,Extended,EA008 = 7 or 8,
+109,,,,,,,23_2,50,2,Stem. Consisting of only two related families.,Stem,EA008 = 6,
+110,,,,,,,23_3,375,3,"Independent Nuclear. Single families, whether monogamous, polygynous or polyandrous.",Independent Nuclear,EA008 ≤ 5,
+111,V24,Marital Residence,"Whether, after marriage, the couple resides with the bride's family, with parents of either side or with neither, or with the groom's family.",Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),24_NA,25,NA,Missing data,Missing data,,
+112,,,,,,,24_1,215,1,Couples reside with bride's family. Duolocal or natolocal residence (where the bride and groom remain in their natal households) is also coded for this point.,Bride,"EA012 = 1, 3, 5, 7, or 9",
+113,,,,,,,24_2,173,2,Couples reside with either side of the family or with neither.,Either/Neither,"EA012 = 2, 4, or 6",
+114,,,,,,,24_3,898,3,Couples reside with groom's family.,Groom,EA012 = 8 or 10,
+115,V25,Lineages,"The mode in which descent is reckoned, whether matrilineal, cognatic, or patrilineal.",Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),25_NA,,NA,Missing data,Missing data,,
+116,,,,,,,25_1,228,1,Descent and kinship is calculated via the maternal or female line.,Matrilineal,EA019 > 1,
+117,,,,,,,25_2,470,2,Descent is calculated in terms of both sides of the family.,Cognatic,EA021 < 9,
+118,,,,,,,25_3,591,3,Descent and kinship is calculated via the paternal or male line.,Patrilineal,EA017 > 1,
+119,V26,Unilateral/Bilateral,"Whether descent is calculated and aid may be sought from one side of the family, or by both sides.",Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),26_NA,14,NA,Missing data,Missing data,,
+120,,,,,,,26_1,759,1,Descent is calculated based on one side of the family (matrilineal or patrilineal).,Unilateral,"Either 
+(EA017 > 1 and EA019 = 1)
+or 
+(EA017 = 1 and EA019 > 1)",
+121,,,,,,,26_2,538,2,Descent is calculated in terms of both sides of the family (cognatic).,Bilateral,"Either 
+(EA017 > 1 and EA019 > 1) 
+or 
+(EA021 < 9)",
+122,V27,Land Ownership,The presence or absence of land ownership in the society.,Property,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),27_NA,437,NA,Missing data,Missing data,,
+123,,,,,,,27_1,220,1,Land ownership absent.,Absence,EA074 = 1,
+124,,,,,,,27_2,654,2,Land ownership present.,Presence,EA074 > 1,
+125,V28,Inheritance of Real Property,"Code whether land is inherited by matrilineal heirs, patrilineal heirs, or both -- these rules exclusive of the dower rights of the widow.",Property,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),28_NA,437,NA,Missing data,Missing data,,
+126,,,,,,,28_1,89,1,"Matrilineal inheritance by daughters, sister’s sons, or other matrilineal heirs.",Matrilineal Heirs,EA074 = 2 or 3,"Original coding instructions mentioned daughters only, but the corresponding Murdock codes listed actually stand for sister's sons or matrilineal heirs."
+127,,,,,,,28_2,339,2,"Inheritance by children of either sex or both, even if the inheritance is unequally distributed between the sexes. Also code for the absence of individual property rights or rules of inheritance of real property.",Either,"EA074 = 1, 4, or 5",
+128,,,,,,,28_3,446,3,Patrilineal inheritance by sons or other patrilineal heirs.,Patrilineal Heirs,EA074 = 6 or 7,
+129,V29,Inheritance of Moveable Property,"Whether moveable property is inherited by daughters, by sons and daughters, or by sons -- these rules exclusive of the dower rights of the widow.",Property,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),29_NA,395,NA,Missing data,Missing data,,
+130,,,,,,,29_1,117,1,"Matrilineal inheritance by daughters, sister’s sons, or other matrilineal heirs.",Matrilineal Heirs,EA076 = 2 or 3,"Original coding instructions mentioned daughters only, but the corresponding Murdock codes listed actually stand for sister's sons or matrilineal heirs."
+131,,,,,,,29_2,312,2,"Inheritance by children of either sex or both, even if the inheritance is unequally distributed between the sexes. Also code for the absence of individual rights to moveable property or rules of inheritance of moveable property.",Either,"EA076 = 1, 4, or 5",
+132,,,,,,,29_3,487,3,Patrilineal inheritance by sons or other patrilineal heirs.,Patrilineal Heirs,EA076 = 6 or 7,
+133,V30,Kin Solidarity,The organization of marriage in the society and the presence or absence of localized kin groups.,Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),30_NA,194,NA,Missing data,Missing data,,
+134,,,,,,,30_1,512,1,"Segmented communities (i.e., those divided into barrios, wards, or hamlets, each of which is essentially a localized kin group, a clan or ramage) or single clan communities (each consisting essentially of a single localized exogamous kin group or clan.)",Segregated Clan,"EA015 = 2, 5, or 6",
+135,,,,,,,30_2,86,2,"Demes, i.e., communities revealing a marked tendency toward local endogamy but not segmented into clan-barrios.",Demes,EA015 = 1,
+136,,,,,,,30_3,519,3,"Without local clans or kin-oriented marriage rules, which support cohesive or solidary organization.",Non-Solidary,EA015 = 3 or 4,
+137,V31,Kinship System,A measure of the degree of structure in the kinship system based on the extent to which names for cousins distinguish cousin subtypes and/or among other groups of kin.,Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),31_NA,385,NA,Missing data,Missing data,,
+138,,,,,,,31_1,137,1,"Structured kinship system, following the Crow or Omaha models of kin terms for cousins described by Murdock.",Structured,EA027 = 1 or 6,
+139,,,,,,,31_2,600,2,"Moderately structured kinship system, following the Hawaiian or Iroquois models of kin terms for cousins described by Murdock.",Mod. Structured,EA027 = 4 or 5,
+140,,,,,,,31_3,189,3,"Loosely structured kinship system, following the descriptive or Eskimo models of kin terms for cousins described by Murdock.",Loosely,EA027 = 2 or 3,
+141,V32,Community Solidarity,"A measure of the relative solidarity of the local community that draws from several Murdock variables to distinguish groupy, clubby, cohesive communities from those that are more individualized and more loosely organized.",Settlement; Politics; Marriage and Kinship,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),32_NA,569,NA,Missing data,Missing data,,
+142,,,,,,,32_1,582,1,"Solidary. Class is not differentiated by an elite resource-controlling class or by a complex stratification system based on occupational status; caste is not differentiated by ethnicity or by a complex stratification system based on occupational status; there are less than three levels of jurisdictional hierarchy beyond the local community; and the community is not nomadic or semi-nomadic. In addition, either descent is calculated unilaterally, or the society is organized into ramages (ancestor-oriented ambilineal kin groups) or clan communities.",Solidary,"(EA066 ≠ 3 or 5 and EA068 < 3 and EA033 < 4 and EA030 > 2) and 
+Either:
+(EA017 > 1 or EA019 > 1) 
+and/or
+(EA021 = 4 or 5) 
+and/or
+(EA015 = 6)",
+143,,,,,,,32_2,160,2,Non-solidary. Society does not meet the established criteria for solidarity.,Non-solidary,Does not satisfy conditions for 32_1,
+144,V33,Social Layering,"An additive score of the social strata in a community, calculated from the Murdock codings for class, caste, and slavery.",Politics,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),33_NA,247,NA,Missing data,Missing data,,
+145,,,,,,,33_1,353,1,"No slavery, class, or caste distinctions (social layering score of zero).",None,"The codes used to calculate a social layering score are weighted according to the following scale:
+EA066_1 = 0, EA066_2 = 1, EA006_3 = 3, EA066_4 = 2, EA066_5 = 3; EA068_1 = 0, EA068_2 = 1, EA068_3 = 2, EA068_4 = 2; EA070_1 = 0, EA070_2 = 1, EA070_3 = 1, EA070_4 = 1
+
+EA066 + EA068 + EA070 = 0",
+146,,,,,,,33_2,254,2,Social layering score of one.,One,l,
+147,,,,,,,33_3,153,3,Social layering score of two.,Two,"The codes used to calculate a social layering score are weighted according to the following scale:
+EA066_1 = 0, EA066_2 = 1, EA006_3 = 3, EA066_4 = 2, EA066_5 = 3; EA068_1 = 0, EA068_2 = 1, EA068_3 = 2, EA068_4 = 2; EA070_1 = 0, EA070_2 = 1, EA070_3 = 1, EA070_4 = 1
+
+EA066 + EA068 + EA070 = 2",
+148,,,,,,,33_4,247,4,Social layering score of three to four.,Mid: 3-4,"The codes used to calculate a social layering score are weighted according to the following scale:
+EA066_1 = 0, EA066_2 = 1, EA006_3 = 3, EA066_4 = 2, EA066_5 = 3; EA068_1 = 0, EA068_2 = 1, EA068_3 = 2, EA068_4 = 2; EA070_1 = 0, EA070_2 = 1, EA070_3 = 1, EA070_4 = 1
+
+EA066 + EA068 + EA070 = 3 or 4",
+149,,,,,,,33_5,57,5,Social layering score of five to six.,High: 5-6,"The codes used to calculate a social layering score are weighted according to the following scale:
+EA066_1 = 0, EA066_2 = 1, EA006_3 = 3, EA066_4 = 2, EA066_5 = 3; EA068_1 = 0, EA068_2 = 1, EA068_3 = 2, EA068_4 = 2; EA070_1 = 0, EA070_2 = 1, EA070_3 = 1, EA070_4 = 1
+
+EA066 + EA068 + EA070 = 5 or 6",
+150,V34,Presence of States,The presence and size of a state system that governs the society (derived from Murdock's 1957 World Ethnographic Sample).,Politics,Categorical,Murdock (1957); Lomax et al. (1971); Wood (2021),34_NA,0,NA,Missing data,Missing data,,"I believe this variable came from Murdock's 1957 World Ethnographic Sample and therefore corresponds to EA090, but specific conversion rules have not been found. Not sure how a value of 90_8 would be converted."
+151,,,,,,,34_0,1010,0,States are absent.,Absent,EA090 ≤ 4,
+152,,,,,,,34_1,151,1,States are small.,Small,EA090 = 5,
+153,,,,,,,34_2,150,2,States are large.,Large,EA090 = 6,
+154,V35,Extra-Local Jurisdictional Hierarchies,The number of non-local levels of political authority that govern a community.,Politics,Ordinal,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),35_NA,136,NA,Missing data,Missing data,,
+155,,,,,,,35_1,523,1,"No political authority beyond community (e.g., autonomous bands and villages)",Zero,EA033 = 1,
+156,,,,,,,35_2,344,2,"One level (e.g., petty chiefdoms)",One,EA033 = 2,
+157,,,,,,,35_3,166,3,"Two levels (e.g., larger chiefdoms) ",Two,EA033 = 3,
+158,,,,,,,35_4,106,4,"Three levels (e.g., states)",Three,EA033 = 4,
+159,,,,,,,35_5,36,5,"Four levels (e.g., large states)",Four,EA033 = 5,
+160,V36,Political Succession,Type of succession to the office of local headman (without reference to high levels of political organization).,Politics,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),36_NA,359,NA,Missing data,Missing data,,
+161,,,,,,,36_1,112,1,Absence of headman.,Absence,EA072 = 9,
+162,,,,,,,36_2,90,2,Election or other formal mode of choosing a headman.,Consensus,EA072 = 7,Coding instructions mention elections for 36_2 but conversion rules place elections in 36_6.
+163,,,,,,,36_3,27,3,One of the senior members of the community is chosen.,Seniority,EA072 = 4,
+164,,,,,,,36_4,514,4,"Any system, where succession is hereditary.",Hereditary,EA072 = 1 or 2,
+165,,,,,,,36_5,44,5,"The choice is informal, based on riches, social standing or the like.",Informal,EA072 = 5,
+166,,,,,,,36_6,165,6,Any other non-hereditary system not described by one of the other categories.,Other Non Hereditary,EA072 = 3 or 6,
+167,V37,High Gods,The culture's religious beliefs about high gods.,Ritual,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),37_NA,521,NA,Missing data,Missing data,,
+168,,,,,,,37_1,284,1,"A group with no belief in a high god (instead a belief in spirits, in nature, in animal helpers or ancestors).",Absent,EA034 = 1,
+169,,,,,,,37_2,250,2,"A high god is believed to exist, but is not concerned with human affairs.",Otiose,EA034 = 2,
+170,,,,,,,37_3,44,3,"A high god exists and is active in human affairs, but does not offer positive support to human morality.",No-Involvement,EA034 = 3,
+171,,,,,,,37_4,212,4,"A high god exists, and is involved with human morality.",Involved,EA034 = 4,
+172,V38,Types of Games,"Distinguishes between cultures that  have no games, those that have games of physical skill alone, those that have both games of physical skill and chance, and those that, in addition, have games of strategy (like checkers).",Games,Categorical,Murdock (1962-1971); Lomax et al. (1971); Kirby et al. (2016); Wood (2021),38_NA,832,NA,Missing data,Missing data,,
+173,,,,,,,38_1,29,1,No games.,Absent,EA035 = 1,
+174,,,,,,,38_2,110,2,"Games of physical skill only, or games of chance only.",Physical-or-Chance,EA035 = 2 or 3,
+175,,,,,,,38_3,252,3,Games of physical skill and of chance both present.,Physical-and-Chance,EA035 = 4,"Coding instructions describe the code as such, but conversion rules say that 38_3 corresponds with EA035_5. This seems like an error."
+176,,,,,,,38_4,88,4,"Other types of games are present in the society, including games of strategy, which may also include elements of physical skill and/or chance.",Others,EA035 ≥ 5,
