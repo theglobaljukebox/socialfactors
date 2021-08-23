@@ -53,6 +53,18 @@ def main():
     data_df.to_csv('raw/data.csv', index=False)
     print("successful")
 
+    # # Variable metadata sheet
+    print("Downloading metadata data into codings.csv")
+    SPREADSHEET_ID = '1GRGrRpfavGdcAHJLKumumtTYJ4jGV8yTVrtCsl5RwNE'
+    RANGE_NAME = "'SF_Codebook'!A3:N178"
+    HEADER_RANGE = "'SF_Codebook'!A2:N2"
+    data, header = read_google_sheets(SPREADSHEET_ID, RANGE_NAME, HEADER_RANGE)
+    songs_df = pd.DataFrame(data, columns = header[0])
+    # keep_columns = variable_metadata.loc[(variable_metadata["table"] == "songs") & (variable_metadata["visibility"] == "public")]
+    # songs_df = songs_df.filter(items = keep_columns["name"])
+    songs_df.to_csv('raw/codings.csv', index=False)
+    print("successful")
+
     # # Song metadata sheet
     print("Downloading source data into sources.csv")
     SPREADSHEET_ID = '1lNCSYGiOv0Gbp63A1gqPLrTtHm71RYvzswDI3Vlfmrk'
