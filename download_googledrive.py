@@ -44,7 +44,7 @@ def main():
     # Data sheet
     print("Downloading data into data.csv")
     SPREADSHEET_ID = '1VyDTgX_gaER8WWDx7yz9bfKT6QddSvQIOFUt9RYF-q8'
-    RANGE_NAME = "'Social Factors Codings'!A2:AP1311"
+    RANGE_NAME = "'Social Factors Codings'!A2:AP"
     HEADER_RANGE = "'Social Factors Codings'!A1:AP"
     data, header = read_google_sheets(SPREADSHEET_ID, RANGE_NAME, HEADER_RANGE)
     data_df = pd.DataFrame(data, columns = header[0])
@@ -56,7 +56,7 @@ def main():
     # # Variable metadata sheet
     print("Downloading metadata data into codings.csv")
     SPREADSHEET_ID = '1GRGrRpfavGdcAHJLKumumtTYJ4jGV8yTVrtCsl5RwNE'
-    RANGE_NAME = "'SF_Codebook'!A3:N178"
+    RANGE_NAME = "'SF_Codebook'!A3:N"
     HEADER_RANGE = "'SF_Codebook'!A2:N2"
     data, header = read_google_sheets(SPREADSHEET_ID, RANGE_NAME, HEADER_RANGE)
     songs_df = pd.DataFrame(data, columns = header[0])
@@ -68,7 +68,7 @@ def main():
     # # Song metadata sheet
     print("Downloading source data into sources.csv")
     SPREADSHEET_ID = '1lNCSYGiOv0Gbp63A1gqPLrTtHm71RYvzswDI3Vlfmrk'
-    RANGE_NAME = "'Sheet1'!A2:H54"
+    RANGE_NAME = "'Sheet1'!A2:H"
     HEADER_RANGE = "'Sheet1'!A1:H1"
     data, header = read_google_sheets(SPREADSHEET_ID, RANGE_NAME, HEADER_RANGE)
     songs_df = pd.DataFrame(data, columns = header[0])
@@ -80,7 +80,7 @@ def main():
     # Society metadata sheet
     print("Downloading society metadata into societies.csv")
     SPREADSHEET_ID = '1tb3Nip43e4LaJbglaXzcCTP2CiMyrgwIsU2egk3tfNM'
-    RANGE_NAME = "'All Cultures'!A2:BA1247"
+    RANGE_NAME = "'All Cultures'!A2:BA"
     HEADER_RANGE = "'All Cultures'!A1:BA1"
     data, header = read_google_sheets(SPREADSHEET_ID, RANGE_NAME, HEADER_RANGE)
     society_df = pd.DataFrame(data, columns = header[0])
